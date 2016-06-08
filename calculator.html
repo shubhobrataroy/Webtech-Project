@@ -1,0 +1,81 @@
+<html>
+
+<head>
+<title> Calculator </title>
+<script>
+
+ 
+
+ function sum ()
+  {
+   
+   if (document.getElementById("firstNumber").value == "" | document.getElementById("secondNumber").value == "")  document.getElementById("MessageBox").innerHTML="Field is empty  ";
+  
+   else 
+   {
+    document.getElementById("MessageBox").innerHTML="";
+    var x=parseInt(document.getElementById("firstNumber").value) + parseInt(document.getElementById("secondNumber").value);
+	document.getElementById("Result").innerHTML = "Result: "+x;
+   }
+  }
+  
+  function sub ()
+  {
+   
+   if (document.getElementById("firstNumber").value == "" | document.getElementById("secondNumber").value == "")  document.getElementById("MessageBox").innerHTML="Field is empty  ";
+  
+   else 
+   {
+    document.getElementById("MessageBox").innerHTML="";
+    var x=parseInt(document.getElementById("firstNumber").value) - parseInt(document.getElementById("secondNumber").value);
+	document.getElementById("Result").innerHTML = "Result: "+x;
+   }
+  }
+  
+  function mult ()
+  {
+   
+   if (document.getElementById("firstNumber").value == "" | document.getElementById("secondNumber").value == "")  document.getElementById("MessageBox").innerHTML="Field is empty  ";
+  
+   else 
+   {
+    document.getElementById("MessageBox").innerHTML="";
+    var x=parseInt(document.getElementById("firstNumber").value) * parseInt(document.getElementById("secondNumber").value);
+	document.getElementById("Result").innerHTML = "Result: "+x;
+   }
+  }
+  
+  function devide ()
+  {
+   
+   if (document.getElementById("firstNumber").value == "" | document.getElementById("secondNumber").value == "")  document.getElementById("MessageBox").innerHTML="Field is empty  ";
+  
+   else 
+   {
+    document.getElementById("MessageBox").innerHTML="";
+    var x=parseInt(document.getElementById("firstNumber").value) / parseInt(document.getElementById("secondNumber").value);
+	document.getElementById("Result").innerHTML = "Result: "+x;
+   }
+  }
+</script>
+
+</head>
+
+<body>
+ <h2>First Number : </h2>
+ <textarea id="firstNumber" name="firstNumber"></textarea>
+ <h2>Second Number : </h2>
+ <textarea id="secondNumber" name="secondNumber"></textarea>
+ <br>
+ <text id="MessageBox" name="MessageBox"></text>
+ <br>
+ <text id="Result" name="Result">Result: </text>
+ <hr>
+ <button id="sum" name="sum" onclick=sum()>   +   </button> 
+ <button id="sub"   onclick=sub()>   -   </button> 
+ <button id="mult"  onclick=mult()>   *   </button> 
+ <button id="div"   onclick=devide()>   /   </button> 
+<body>
+
+
+</html>
