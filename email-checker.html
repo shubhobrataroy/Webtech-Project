@@ -1,0 +1,30 @@
+<html>
+
+<head>
+ <title>Email Checker</title>
+ <script>
+  function emailCheck (){
+    var x =document.getElementById("email_container").value;
+	
+	if(x=="") document.getElementById("email").innerHTML= "This field is empty";
+	
+	else 
+	  {	    
+	    if(x.match(".com")==".com" && x.indexOf("@")>0) document.getElementById("email").innerHTML= "Valid Email";
+	  }
+	
+	var y =document.getElementById("username_container").value;
+	if(y=="") document.getElementById("username").innerHTML= "This field is empty";
+  }
+ </script>
+</head>
+
+<body>
+   <h2>Username</h2> <textarea id="username_container" name="username_container" ></textarea> <label id="username"></label>
+   
+   <h2>Email : </h2> <textarea id="email_container" name="email_container" ></textarea> <label id="email"></label>
+   <br/>
+   <button id="done" name="done" onclick=emailCheck()>Done</button> 
+   
+</body>
+</html>
