@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Rectangle</title>
+<script type="text/javascript">
+
+function createRect(){
+   var wid = document.getElementById("wid").value;
+   var height = document.getElementById("hig").value;
+   
+	document.getElementById("rectangle").style.width = wid;
+	document.getElementById("rectangle").style.height = height;
+}
+
+</script>
+<head>
+
+<body>
+<tr>
+	<td>
+		Width:<input type="text" id="wid" name="txtbox1"></input>
+	</td>
+	<br>
+	<td>
+		Heigth:<input type="text" id="hig" name="txtbox2"></input>
+	</td>
+</tr><br><br>
+<input type="button" value="Create" id="cbtn" color="red" onclick="createRect()"></input><br><br>
+<div id="rectangle" style="width:0px;height:0px;background-color:blue"></div>
+
+</body>
+
+</html>

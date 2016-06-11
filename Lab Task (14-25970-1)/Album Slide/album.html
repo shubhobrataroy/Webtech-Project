@@ -1,0 +1,64 @@
+<html>
+<head>
+ <title>Photo Album </title>
+ <script>
+  var x= 0;
+  var slider;
+  function startSlideShow()
+  {
+   slider = setInterval(next, 1000);
+  }
+  
+  function stopSlideShow()
+  {
+  clearInterval(slider);
+  }
+  
+  function next ()
+  {
+    x++;
+    if(x>3)
+	{
+	document.getElementById("image").src="1.jpeg";
+	x=1;
+	}
+	if(x==1)       document.getElementById("image").src="1.jpeg";
+	else if (x==2) document.getElementById("image").src="2.jpg";
+	else if (x==3) document.getElementById("image").src="3.jpg";
+	
+	
+	}
+	
+	
+function previous ()
+  {
+    x--;
+	
+	if(x<1) 
+	{
+	document.getElementById("image").src="3.jpg";
+	x=3;
+	}
+	
+	if(x==1)       document.getElementById("image").src="1.jpeg";
+	else if (x==2) document.getElementById("image").src="2.jpg";
+	else if (x==3) document.getElementById("image").src="3.jpg";
+  }
+ </script> 
+ 
+</head>
+
+<body>
+ <img style="width:400px;height:400px" id="image" name="image" >
+ <hr>
+ <br>
+ <button id="prev" name="prev" onclick=previous()>Previous</button>
+ 
+ <button id="next" name="next" onclick=next()>next</button>
+ 
+ <button id="slide" name="slide" onclick=startSlideShow()>Start SlideShow</button>
+ <button  onclick=stopSlideShow()>Stop SlideShow</button>
+ 
+</body>
+
+</html>
